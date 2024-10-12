@@ -19,7 +19,7 @@ const Banner = () => {
         </ul>
       </div>
       <Line/>
-      <div className="content w-3/4 overflow-hidden">
+      <div className="content w-3/4 ">
       <SimpleSlider/>
       </div>
     </div>
