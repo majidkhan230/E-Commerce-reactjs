@@ -15,7 +15,7 @@ const Header = () => {
           <input
             type="text"
             placeholder="what are your looking for?"
-            className="bg-transparent"
+            className="bg-transparent outline-none focus:text-black"
           />
           <img src="/assets/images/search.png" alt="" />
         </div>
