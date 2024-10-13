@@ -3,6 +3,7 @@ import TopHeader from "../components/common/TopHeader";
 import Header from "../components/common/Header";
 import Line from "../components/common/Line";
 import Footer from "../components/common/Footer";
+import Button from "../components/common/Button";
 
 const Signup = () => {
   return (
@@ -41,9 +42,7 @@ const Signup = () => {
                 placeholder="Password"
                 className="bg-transparent outline-none border-b-2 border-gray-300 focus:border-red-500"
               />
-              <button className="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 rounded transition duration-300">
-                Create Account
-              </button>
+              <Button btnTxt={"Create an Account"}/>
               <button className="border-2 border-red-500 font-semibold py-2 text-red-500 hover:bg-red-500 hover:text-white transition duration-300">
                 Sign up with Google
               </button>

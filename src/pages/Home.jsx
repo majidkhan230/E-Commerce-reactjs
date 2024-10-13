@@ -7,20 +7,24 @@ import Banner from "../components/Banner";
 import SaleBanner from "../components/SaleBanner";
 import Signup from "./Signup";
 import Login from "./Login";
+import ProductDetails from "./ProductDetails";
 
 const Home = () => {
   return (
     <div>
-<TopHeader/>
+{/* <TopHeader/>
 <Header/>
 <Line/>
 <Banner/>
 <SaleBanner/>
-<Footer/>
+<Footer/> */}
 
 {/* <Signup/> */}
 
 {/* <Login/> */}
+
+
+<ProductDetails/>
     </div>
   );
 };
