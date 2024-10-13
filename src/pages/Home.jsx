@@ -8,6 +8,7 @@ import SaleBanner from "../components/SaleBanner";
 import Signup from "./Signup";
 import Login from "./Login";
 import ProductDetails from "./ProductDetails";
+import Cart from "./Cart";
 
 const Home = () => {
   return (
@@ -23,8 +24,10 @@ const Home = () => {
 
 {/* <Login/> */}
 
+{/* 
+<ProductDetails/> */}
 
-<ProductDetails/>
+<Cart/>
     </div>
   );
 };

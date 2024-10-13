@@ -5,6 +5,7 @@ import Line from "../components/common/Line";
 import Star from "../components/common/Star";
 import Button from "../components/common/Button";
 import Footer from "../components/common/Footer";
+import Card from "../components/common/Card";
 
 const ProductDetails = () => {
   const { title, price, rating, description, review, quantity } = {
@@ -22,7 +23,7 @@ const ProductDetails = () => {
       <Header />
       <Line />
 
-      <div className="detailBanner grid grid-cols-1 lg:grid-cols-6 mt-10 gap-4 lg:gap-6 px-5 lg:px-20 my-10">
+      <div className="detailBanner grid grid-cols-1 lg:grid-cols-6 mt-10 gap-4 lg:gap-6 px-5 lg:px-20 m-10">
       <div className="grid grid-cols-4 lg:grid-cols-1 lg:grid-rows-4 gap-2">
   <img src="/assets/images/gamepaddetail1.png" className="w-full h-full object-cover aspect-[1/1]" alt="Small detail" />
   <img src="/assets/images/gamepaddetail1.png" className="w-full h-full object-cover aspect-[1/1]" alt="Small detail" />
@@ -73,6 +74,15 @@ const ProductDetails = () => {
     </div>
   </div>
 </div>
+
+<div className="px-20 mb-20">
+      <div className="flex items-center mb-4">
+        <img src="/assets/images/CategoryRectangle.png" alt="" />
+        <h2 className="ml-2 text-red-500">Related Items</h2>
+      </div>
+      <Card/>
+    </div>
+
       <Footer/>
     </div>
   );

@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Star from "./Star";
 
-const CartWithFlatDiscount = () => {
+const Card = () => {
   const settings = {
     dots: false,
     infinite: true,
@@ -81,4 +81,4 @@ const CartWithFlatDiscount = () => {
   );
 };
 
-export default CartWithFlatDiscount;
+export default Card;

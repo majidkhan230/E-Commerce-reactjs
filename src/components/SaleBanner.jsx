@@ -1,5 +1,5 @@
 import React from "react";
-import CartWithFlatDiscount from "./common/CartWithFlatDiscount";
+import Card from "./common/Card";
 
 const SaleBanner = () => {
   return (
@@ -11,7 +11,7 @@ const SaleBanner = () => {
       <div className="font-bold text-2xl m-4">
         <h1>Flash Sales</h1>
       </div>
-      <CartWithFlatDiscount/>
+      <Card/>
     </div>
   );
 };
