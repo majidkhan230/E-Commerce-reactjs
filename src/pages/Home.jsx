@@ -11,16 +11,16 @@ import Login from "./Login";
 const Home = () => {
   return (
     <div>
-{/* <TopHeader/>
+<TopHeader/>
 <Header/>
 <Line/>
 <Banner/>
-<SaleBanner/> */}
-{/* <Footer/> */}
+<SaleBanner/>
+<Footer/>
 
 {/* <Signup/> */}
 
-<Login/>
+{/* <Login/> */}
     </div>
   );
 };
