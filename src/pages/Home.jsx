@@ -14,11 +14,11 @@ const Home = () => {
   return (
     <div>
 {/* <TopHeader/>
-<Header/>
+<Header/> */}
 <Line/>
 <Banner/>
 <SaleBanner/>
-<Footer/> */}
+{/* <Footer/> */}
 
 {/* <Signup/> */}
 
@@ -27,7 +27,7 @@ const Home = () => {
 {/* 
 <ProductDetails/> */}
 
-<Cart/>
+{/* <Cart/> */}
     </div>
   );
 };

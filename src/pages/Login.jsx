@@ -7,9 +7,9 @@ import Footer from "../components/common/Footer";
 const Login = () => {
   return (
     <div>
-      <TopHeader />
+      {/* <TopHeader />
       <Header />
-      <Line />
+      <Line /> */}
       <div className="flex flex-col md:flex-row my-10">
         {/* Left Section for Image */}
         <div className="left w-full md:w-1/2">
@@ -57,7 +57,7 @@ const Login = () => {
           </div>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

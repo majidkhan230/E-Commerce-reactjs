@@ -19,9 +19,9 @@ const ProductDetails = () => {
   };
   return (
     <div className="">
-      <TopHeader />
+      {/* <TopHeader />
       <Header />
-      <Line />
+      <Line /> */}
 
       <div className="detailBanner grid grid-cols-1 lg:grid-cols-6 mt-10 gap-4 lg:gap-6 px-5 lg:px-20 m-10">
       <div className="grid grid-cols-4 lg:grid-cols-1 lg:grid-rows-4 gap-2">
@@ -83,7 +83,7 @@ const ProductDetails = () => {
       <Card/>
     </div>
 
-      <Footer/>
+      {/* <Footer/> */}
     </div>
   );
 };

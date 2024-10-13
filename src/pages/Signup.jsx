@@ -4,13 +4,14 @@ import Header from "../components/common/Header";
 import Line from "../components/common/Line";
 import Footer from "../components/common/Footer";
 import Button from "../components/common/Button";
+import { Link } from "react-router-dom";
 
 const Signup = () => {
   return (
     <div>
-      <TopHeader />
+      {/* <TopHeader />
       <Header />
-      <Line />
+      <Line /> */}
       <div className="flex flex-col md:flex-row my-10">
         <div className="left w-full md:w-1/2">
           <img
@@ -50,15 +51,15 @@ const Signup = () => {
             <div className="mt-4 text-center">
               <h1>
                 <span>Already have an account? </span>
-                <a href="#" className="underline text-red-500">
+                <Link to={"/login"} className="underline text-red-500">
                   Login
-                </a>
+                </Link>
               </h1>
             </div>
           </div>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

@@ -1,8 +1,8 @@
 import React from "react";
-
+import { TiArrowRightThick } from "react-icons/ti";
 const Footer = () => {
   return (
-    <footer className="bg-black text-white py-10">
+    <footer className="bg-black text-white py-10 px-20">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-5 gap-10">
         <div>
           <h3 className="font-bold text-lg mb-4">Exclusive</h3>
@@ -13,7 +13,7 @@ const Footer = () => {
               placeholder="Enter your email"
               className="bg-transparent outline-none placeholder-gray-400 text-white flex-grow"
             />
-            <button className="text-white px-2">→</button>
+            <button className="text-white px-2"><TiArrowRightThick className="" /></button>
           </div>
         </div>
 
@@ -60,20 +60,7 @@ const Footer = () => {
               className="w-24"
             />
           </div>
-          <div className="flex space-x-4">
-            <a href="#" className="text-gray-400 hover:text-white">
-              <i className="fab fa-facebook-f"></i>s
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white">
-              <i className="fab fa-twitter"></i>
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white">
-              <i className="fab fa-instagram"></i>
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white">
-              <i className="fab fa-linkedin-in"></i>
-            </a>
-          </div>
+          
         </div>
       </div>
     </footer>
