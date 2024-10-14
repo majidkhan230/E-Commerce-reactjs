@@ -1,16 +1,58 @@
 import React from "react";
-import TopHeader from "../components/common/TopHeader";
-import Header from "../components/common/Header";
-import Line from "../components/common/Line";
-import Footer from "../components/common/Footer";
+import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import Button from "../components/common/Button";
+import {auth,signInWithEmailAndPassword} from "../firebaseConfig";
+import { toast } from "react-toastify";
 
 const Login = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+
+  const handleLogin = async (data) => {
+    const { email, password } = data;
+    console.log(email, password);
+
+    try {
+      const userCredential = await signInWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      const user = userCredential.user;
+      console.log(user);
+      toast.success("You have successfully logged in.", {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    } catch (error) {
+      console.log(error.message);
+      toast.error(error.message, {
+        position: "bottom-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    }
+  };
+
   return (
     <div>
-      {/* <TopHeader />
-      <Header />
-      <Line /> */}
+
       <div className="flex flex-col md:flex-row my-10">
         {/* Left Section for Image */}
         <div className="left w-full md:w-1/2">
@@ -28,23 +70,30 @@ const Login = () => {
               Login to your account
             </h1>
             <h4 className="mt-2 text-lg">Enter your credentials below</h4>
-            <form action="#" className="flex flex-col gap-4 mt-10">
+            <form action="#" className="flex flex-col gap-6 mt-10" onSubmit={handleSubmit((data)=>{
+           handleLogin(data);
+            })}>
               <input
+              {...register("email",{required:true})}
                 type="text"
-                placeholder="Email or Phone Number"
+                placeholder="Email"
                 className="bg-transparent outline-none border-b-2 border-gray-300 focus:border-red-500"
               />
+               {errors.email && (
+                <p className="text-red-500">Email is required.</p>
+              )}
               <input
+               {...register("password",{required:true})}
                 type="password"
                 placeholder="Password"
                 className="bg-transparent outline-none border-b-2 border-gray-300 focus:border-red-500"
               />
-              <div className="flex items-center justify-between px-5">
-                <button className="bg-red-500 rounded-xl px-10 tracking-widest hover:bg-red-600 text-white font-semibold py-2  transition duration-300">
-                  Login
-                </button>
+               {errors.password && (
+                <p className="text-red-500">Password is required.</p>
+              )}
+
+              <Button btnTxt={"Login"}/>
                 <a href="#" className="text-red-500">Forgot Password</a>
-              </div>
              
             </form>
             <div className="mt-4 text-center">

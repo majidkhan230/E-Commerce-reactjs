@@ -8,6 +8,7 @@ import Home from "../pages/Home";
 import ProductDetails from "../pages/ProductDetails";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
+import Dashboard from "../pages/Dashboard";
 const Routes = createBrowserRouter([
   {
       path:"/",
@@ -36,6 +37,10 @@ const Routes = createBrowserRouter([
           {
               path:"/contact",
               element:<Contact/>
+          },
+          {
+              path:"/dashboard",
+              element:<Dashboard/>
           },
       ]
   }

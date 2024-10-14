@@ -5,7 +5,8 @@ import TopHeader from './components/common/TopHeader'
 import Header from './components/common/Header'
 import Footer from './components/common/Footer'
 import Line from './components/common/Line'
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const App = () => {
   return (
     <div>
@@ -14,6 +15,7 @@ const App = () => {
       <Line/>
  <Outlet/>
  <Footer/>
+ <ToastContainer />
     </div>
   )
 }
