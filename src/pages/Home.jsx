@@ -9,25 +9,17 @@ import Signup from "./Signup";
 import Login from "./Login";
 import ProductDetails from "./ProductDetails";
 import Cart from "./Cart";
+import ExploreProducts from "../components/common/ExploreProducts";
 
 const Home = () => {
   return (
     <div>
-{/* <TopHeader/>
-<Header/> */}
+
 <Line/>
 <Banner/>
 <SaleBanner/>
-{/* <Footer/> */}
+<ExploreProducts/>
 
-{/* <Signup/> */}
-
-{/* <Login/> */}
-
-{/* 
-<ProductDetails/> */}
-
-{/* <Cart/> */}
     </div>
   );
 };

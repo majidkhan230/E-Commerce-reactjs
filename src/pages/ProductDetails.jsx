@@ -5,7 +5,7 @@ import Line from "../components/common/Line";
 import Star from "../components/common/Star";
 import Button from "../components/common/Button";
 import Footer from "../components/common/Footer";
-import Card from "../components/common/Card";
+import Card from "../components/common/SliderCards";
 
 const ProductDetails = () => {
   const { title, price, rating, description, review, quantity } = {
