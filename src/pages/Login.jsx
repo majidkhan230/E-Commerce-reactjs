@@ -3,6 +3,7 @@ import TopHeader from "../components/common/TopHeader";
 import Header from "../components/common/Header";
 import Line from "../components/common/Line";
 import Footer from "../components/common/Footer";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
@@ -49,9 +50,9 @@ const Login = () => {
             <div className="mt-4 text-center">
               <h1>
                 <span>Don't have an account? </span>
-                <a href="#" className="underline text-red-500">
+                <Link to={"/signup"} className="underline text-red-500">
                   Sign up
-                </a>
+                </Link>
               </h1>
             </div>
           </div>

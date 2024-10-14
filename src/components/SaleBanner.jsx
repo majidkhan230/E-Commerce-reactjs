@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "./common/Card";
+import FlashSaleTimer from "./common/FlashSaleTimer";
 
 const SaleBanner = () => {
   return (
@@ -8,8 +9,9 @@ const SaleBanner = () => {
         <img src="/assets/images/CategoryRectangle.png" alt="" />
         <h2 className="ml-2 text-red-500">Today's</h2>
       </div>
-      <div className="font-bold text-2xl m-4">
-        <h1>Flash Sales</h1>
+      <div className=" m-4 flex items-end gap-10">
+        <h1 className="font-bold text-3xl ">Flash Sales</h1>
+        <FlashSaleTimer/>
       </div>
       <Card/>
     </div>
