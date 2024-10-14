@@ -1,12 +1,12 @@
 import React from "react";
 import Button from "../components/common/Button";
 import { Link, useNavigate } from "react-router-dom";
-import {auth,createUserWithEmailAndPassword} from "../firebaseConfig";
+import {auth,createUserWithEmailAndPassword, onAuthStateChanged} from "../firebaseConfig";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 
 const Signup = () => {
-  console.log(auth);
+
   const {
     register,
     handleSubmit,
@@ -14,6 +14,13 @@ const Signup = () => {
   } = useForm();
 
 const navigate = useNavigate();
+
+
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+   navigate('/dashboard')
+    }
+  });
 
   const handleSignup = async (data) => {
     const { email, password } = data;
@@ -25,8 +32,8 @@ const navigate = useNavigate();
         email,
         password
       );
-      const user = userCredential.user;
-      console.log(user);
+      // const user = userCredential.user;
+      // console.log(user);
       toast.success("User registered successfully!", {
         position: "top-center",
         autoClose: 3000,

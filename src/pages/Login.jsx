@@ -1,8 +1,8 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Button from "../components/common/Button";
-import {auth,signInWithEmailAndPassword} from "../firebaseConfig";
+import {auth,onAuthStateChanged,signInWithEmailAndPassword} from "../firebaseConfig";
 import { toast } from "react-toastify";
 
 const Login = () => {
@@ -12,10 +12,17 @@ const Login = () => {
     formState: { errors },
   } = useForm();
 
+  
+const navigate = useNavigate();
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+   navigate('/dashboard')
+    }
+  });
 
   const handleLogin = async (data) => {
     const { email, password } = data;
-    console.log(email, password);
+
 
     try {
       const userCredential = await signInWithEmailAndPassword(
@@ -23,8 +30,8 @@ const Login = () => {
         email,
         password
       );
-      const user = userCredential.user;
-      console.log(user);
+      // const user = userCredential.user;
+      // console.log(user);
       toast.success("You have successfully logged in.", {
         position: "top-center",
         autoClose: 3000,

@@ -2,12 +2,22 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Button from "./Button";
 import { BiLogIn, BiLogOut, BiUser } from "react-icons/bi";
+import { toast } from "react-toastify";
+import {auth,signOut} from "/src/firebaseConfig.js"
 
 const Header = () => {
   const location = useLocation();
 
 const isDashboardRoute = location.pathname ==="/dashboard"
   
+const logOut = ()=>{
+  signOut(auth).then(() => {
+  toast.success("sucessfully logout")
+  }).catch((error) => {
+   console.log(error.message);
+   toast.error(error.message)
+  });
+}
 
   return (
     <div className="Header flex items-center justify-between px-20 py-5">
@@ -40,7 +50,7 @@ const isDashboardRoute = location.pathname ==="/dashboard"
             isDashboardRoute && <div className="flex items-center ml-6">
               <div className="logout text-xl rounded-full bg-red-600 p-2 flex items-center  text-white"><BiUser/></div>
           <h1 className="font-semibold text-2xl ml-2">Majid</h1>
-<div className="logout text-xl rounded-full bg-red-600 p-2 flex items-center ml-2 text-white"><BiLogOut/></div>
+<div onClick={()=>{logOut()}} className="logout text-xl rounded-full bg-red-600 p-2 flex items-center ml-2 text-white"><BiLogOut/></div>
 
             </div>
           }
