@@ -1,15 +1,11 @@
 import React from "react";
-import TopHeader from "../components/common/TopHeader";
-import Header from "../components/common/Header";
 import Line from "../components/common/Line";
 import Button from "../components/common/Button";
 
 const Cart = () => {
   return (
     <div>
-      <TopHeader />
-      <Header />
-      <Line />
+ 
       <div className="cart mt-10 px-20">
         <table className="w-full  text-center">
           <tr className=" border  drop-shadow-sm">

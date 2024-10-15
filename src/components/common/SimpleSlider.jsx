@@ -18,16 +18,16 @@ function Fade() {
     <div className="slider-container p-6">
       <Slider {...settings}>
         <div>
-          <img src={baseUrl} />
+          <img src={baseUrl} className="w-full h-96 object-fill"  />
         </div>
         <div>
-          <img src={baseUrl} />
+          <img src="/assets/images/headphones.jpg"  className="w-full h-96 object-cover" />
         </div>
         <div>
-          <img src={baseUrl} />
+          <img src="/assets/images/watch.jpg"  className="w-full h-96 object-cover"  />
         </div>
         <div>
-          <img src={baseUrl} />
+        <img  src="/assets/images/ps5.jpg"  className="w-full h-96 object-cover" />
         </div>
       </Slider>
     </div>

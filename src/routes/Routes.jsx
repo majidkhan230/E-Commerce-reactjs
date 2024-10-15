@@ -9,6 +9,7 @@ import ProductDetails from "../pages/ProductDetails";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
 import Dashboard from "../pages/Dashboard";
+import Cart from "../pages/Cart";
 const Routes = createBrowserRouter([
   {
       path:"/",
@@ -41,6 +42,14 @@ const Routes = createBrowserRouter([
           {
               path:"/dashboard",
               element:<Dashboard/>
+          },
+          {
+              path:"/cart",
+              element:<Cart/>
+          },
+          {
+              path:"/product/:id",
+              element:<ProductDetails/>
           },
       ]
   }
