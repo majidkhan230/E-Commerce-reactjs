@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import Button from "../components/common/Button";
 import {auth,onAuthStateChanged,signInWithEmailAndPassword} from "../firebaseConfig";
 import { toast } from "react-toastify";
+import { AuthContext } from "../context/AuthContext";
 
 const Login = () => {
+
+  const myContext = useContext(AuthContext)
+console.log(myContext)
+
   const {
     register,
     handleSubmit,
@@ -14,6 +19,7 @@ const Login = () => {
 
   
 const navigate = useNavigate();
+
   onAuthStateChanged(auth, (user) => {
     if (user) {
    navigate('/dashboard')

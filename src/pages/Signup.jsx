@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import Button from "../components/common/Button";
 import { Link, useNavigate } from "react-router-dom";
 import {auth,createUserWithEmailAndPassword, onAuthStateChanged} from "../firebaseConfig";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
+import { AuthContext } from "../context/AuthContext";
 
 const Signup = () => {
+  const myContext = useContext(AuthContext)
+console.log(myContext)
 
   const {
     register,

@@ -3,6 +3,7 @@ import FlashSaleTimer from "./common/FlashSaleTimer";
 import SliderCards from "./common/SliderCards";
 
 const SaleBanner = () => {
+  
   return (
     <div className="px-20">
       <div className="flex items-center">
